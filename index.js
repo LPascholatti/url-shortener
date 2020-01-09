@@ -4,6 +4,8 @@ const port = process.env.PORT || 4000
 const app = express();
 
 app.use(express.json({ extended: false}));
+app.use('/index', require('./routes/index'));
+app.use('/api/url', require('./routes/url'));
 
 connectDB();
 
